@@ -1,0 +1,116 @@
+
+html{
+    cursor: url(cursor.png), auto;
+}
+
+
+body{
+    background-image: url(fon.jpg);
+	margin: auto;
+	position: relative;
+    width: 300px;
+    padding: 30px;
+    font-family: Arial;
+}
+
+h1{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.laba1 img{
+    position: relative;
+    margin: auto;
+    display:block;
+}
+
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border:2px solid;
+}
+
+.bold{
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(187, 70, 187);
+    font-size:  18px;
+}
+
+table th, td{
+    border: 2px solid;
+    width: 2%;
+    background-color: white;
+    font-size: 14px;
+}
+
+
+h2{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button{
+    width: 149px;
+    background-color: rgb(187, 70, 187);
+    font-size: 20px;
+    color: black;
+    height: 30px;
+    float: left;
+    border-radius: 5px;
+}
+
+
+p{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+#arg, #sum, #mas{
+    border-radius: 5px;
+    color: black;
+    display: inline-block;
+    margin-left: 1px;
+    height: 25px;
+    border:  2px rgb(187, 70, 187) solid;
+    width: 145px;
+    background: white;
+    font-size: 20px;
+    text-align: right;
+    
+}
+
+.input #a1, #a2, #m1, #m2, #m3, #m4{
+    display: inline;
+    border: 0px black solid;
+    width: 143px;
+    background: white;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#easterEgg{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: black;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+}
+
+.content{
+    display: none;
+}

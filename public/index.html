@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>WEBlab</title>
+</head>
+<body>
+    <div class="content">
+    <h1>Лабораторная работа №1</h1>
+    <div class="laba1">
+            <img src="impostor2.png">
+            
+        <div class="information">
+            <table>
+                <tr>
+                    <td colspan="2" class="bold">Информация</th>
+                </tr>
+                <tr>
+                    <td>Имя:</td>
+                    <td>Розовый</td>
+                </tr>
+                <tr>
+                    <td>Роль:</td>
+                    <td>Предатель</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="bold">Характеристика</th>
+                </tr>
+                <tr>
+                    <td>Вид:</td>
+                    <td>Человечек</td>
+                </tr>
+                <tr>
+                    <td>Род деятельности:</td>
+                    <td>Космонавт</td>
+                </tr>
+                <tr>
+                    <td>Пол:</td>
+                    <td>Неизвестен</td>
+                </tr>
+                <tr>
+                    <td>Возраст:</td>
+                    <td>Неизвестен</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="bold">Вклад</th>
+                </tr>
+                <tr>
+                    <td>Убито игроков:</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Устроено саботажей:</td>
+                    <td>2</td>
+                </tr>
+            </table>    
+        </div>
+        <h2>Лабораторная работа №2</h2>
+        <div class="laba2">
+            <div class="argument">
+                <p>Рандооооооооом!</p>
+                <button>Жми!</button>
+                <div id="arg"></div>
+             </div>
+             <div class="summa">
+                <p>Введите 2 значения</p>
+                <div class="input">
+                    <input type="text" id="a1">
+                    <input type="text" id="a2">
+                </div>
+                <button id="b2">Посчитай, плз</button>
+                <div id="sum"></div>
+             </div>
+             <div class="massiv">
+                <p>Введите 4 значения</p>
+                <div class="input">
+                    <input type="text" id="m1">
+                    <input type="text" id="m2">
+                    <input type="text" id="m3">
+                    <input type="text" id="m4">
+                </div>
+                <button id="b3">Это в квадрат</button>
+                <div id="mas"></div>
+             </div>
+
+
+        </div>
+    </div>
+</div>
+    <div id="easterEgg">Нашол</div>
+    
+</body>
+</html>
+
+
+<script>
+    var showContent = document.querySelector("#easterEgg");
+    showContent.addEventListener("mousedown", function(event) {
+        fadeIn(".content");
+    });
+
+
+    var button = document.querySelector("button");
+    button.addEventListener("mousedown", function(event) {
+        var el = document.getElementById('arg');
+        el.innerText = ex1(Math.floor(Math.random() * (10 - 0)));
+    });
+
+    var button2 = document.querySelector("#b2");
+    
+
+    button2.addEventListener("mousedown", function(event) {
+        var A1_id = document.getElementById('a1').value;
+        var A2_id = document.getElementById('a2').value;
+
+        var resultSum = document.getElementById('sum');
+        resultSum.innerText = Summa(A1_id, A2_id);
+    });
+
+    var button3 = document.querySelector("#b3");
+    button3.addEventListener("mousedown", function(event) {
+        let arr =  [
+        document.getElementById('m1').value,
+        document.getElementById('m2').value,
+        document.getElementById('m3').value,
+        document.getElementById('m4').value,
+    ]
+        var resultSqu = document.getElementById('mas');
+        var otvet = "";
+        for (var i = 0; i < arr.length; i++)
+        {
+            if (isNaN(arr[i])){
+                arr[i] = 0;
+            }
+            otvet += square(arr[i]);
+            if (i != (arr.length - 1)) {
+                otvet += ", ";
+            }
+        }
+        resultSqu.innerText = otvet;
+    });
+
+    function ex1(q){
+            return q;
+        }
+  
+    function Summa(a1, a2) {
+        var s = 0;
+        if (isNaN(a1)) a1 = 0;
+        if (isNaN(a2)) a2 = 0;
+        s = parseInt(a1) + parseInt(a2);
+        return s;
+    }
+
+    function square(m) {
+        var otv = parseInt(m)*parseInt(m);
+        return otv;     
+    }
+    
+
+    function fadeIn(el) {
+  
+  var opacity = 0.01;
+
+  document.querySelector(el).style.display = "block";
+
+  var timer = setInterval(function() {
+  
+      if(opacity >= 1) {
+          
+          clearInterval(timer);
+      
+      }
+      
+      document.querySelector(el).style.opacity = opacity;
+   
+      opacity += opacity * 0.1;
+ 
+  }, 10);
+  
+}
+
+</script>
